@@ -8,9 +8,8 @@ import { worker } from 'src/mocks/setup';
 import store from 'src/redux/store';
 import { Provider } from 'react-redux';
 
-if (process.env.NODE_ENV === 'development') {
-  void worker.start();
-}
+// start mock service worker
+void worker.start();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,

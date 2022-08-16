@@ -1,16 +1,16 @@
 import { Dispatch } from '@reduxjs/toolkit';
-import { mockApiEndPoint } from 'src/utils/MockApiEndPoint';
+import { mockApiEndPoint } from 'src/utils/mockApiEndPoint';
 import {
   setUsersError,
   setUsersLoading,
   setUsersSuccess,
 } from 'src/redux/slices/userSlice';
-import axios from 'src/utils/AxiosService';
+import axios from 'src/utils/axiosService';
 
 export const getUsersAction = () => async (dispatch: Dispatch) => {
   dispatch(setUsersLoading(true));
 
-  return await axios({
+  return axios({
     method: 'GET',
     uri: mockApiEndPoint.getUsers,
     onError: (e) => {

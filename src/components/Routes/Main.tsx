@@ -1,21 +1,14 @@
 import React from 'react';
-import { useRoutes } from 'react-router-dom';
-import Landing from 'src/components/Pages/Landing/Landing';
+import { Route, Routes } from 'react-router-dom';
+import Landing from '../Pages/Landing/Landing';
 import NotFound from '../Pages/NotFound/NotFound';
 
 const Main = () => {
-  const routes = useRoutes([
-    {
-      element: <Landing />,
-      path: '/',
-      index: true,
-    },
-    {
-      element: <NotFound />,
-      path: '*',
-    },
-  ]);
-
-  return routes;
+  return (
+    <Routes>
+      <Route element={<Landing />} path="/" />
+      <Route element={<NotFound />} path="*" />
+    </Routes>
+  );
 };
 export default Main;
