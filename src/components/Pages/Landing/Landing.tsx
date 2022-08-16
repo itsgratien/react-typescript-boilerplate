@@ -2,35 +2,23 @@ import React from 'react';
 import style from './Landing.module.scss';
 import classname from 'classnames';
 import { handIcon } from 'src/assets/images';
-import { mockApiEndPoint } from 'src/utils/MockApiEndPoint';
-import { User } from 'src/types/Shared';
-import axios from 'src/utils/AxiosService';
+import { useAppDispatch, useAppSelector } from 'src/hooks/useRedux';
+import { getUsersAction } from 'src/redux/actions/userAction';
 
 const Landing = () => {
-  const [users, setUsers] = React.useState<User[]>();
+  const dispatch = useAppDispatch();
 
-  const [loading, setLoading] = React.useState<boolean>(true);
+  const selector = useAppSelector((state) => ({
+    loading: state.userReducer.getUsersLoading,
+    users: state.userReducer.getUsersSuccess,
+  }));
+
+  const { loading, users } = selector;
 
   React.useEffect(() => {
-    const find = async () => {
-      await axios({
-        method: 'GET',
-        uri: mockApiEndPoint.getUsers,
-        onError: () => {
-          setLoading(false);
-        },
-        onSuccess: (res) => {
-          setUsers(res.data.data);
-          setLoading(false);
-        },
-        onUploadProgress: (value) => {
-          console.log('pro:',value);
-        },
-      });
-    };
-
-    find();
+    dispatch(getUsersAction());
   }, []);
+  
   return (
     <div
       className={classname(

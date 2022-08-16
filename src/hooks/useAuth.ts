@@ -1,16 +1,10 @@
 import React from 'react';
+import { AuthContext } from 'src/contexts/AuthContext';
 
 const useAuth = () => {
-  const [loading, setLoading] = React.useState<boolean>(true);
+  const context = React.useContext(AuthContext);
 
-  const [isAuth, setIsAuth] = React.useState<boolean>(false);
-
-  React.useEffect(() => {
-    setLoading(false);
-    setIsAuth(true);
-  }, []);
-
-  return { loading, isAuth };
+  return context;
 };
 
 export default useAuth;
