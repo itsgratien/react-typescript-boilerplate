@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
+import AppRoutes from 'src/components/Routes/Main';
 
 const App = () => {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <AppRoutes />
     </div>
   );
 };
