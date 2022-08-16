@@ -1,4 +1,5 @@
 import { RestRequest, ResponseFunction, RestContext } from 'msw';
+import { faker } from '@faker-js/faker';
 
 export const getUsers = (
   _req: RestRequest,
@@ -7,7 +8,19 @@ export const getUsers = (
 ) => {
   const users = [
     {
-      username: 'John Doe',
+      username: faker.name.fullName(),
+      id: Math.random,
+    },
+    {
+      username: faker.name.fullName(),
+      id: Math.random,
+    },
+    {
+      username: faker.name.fullName(),
+      id: Math.random,
+    },
+    {
+      username: faker.name.fullName(),
       id: Math.random,
     },
   ];
