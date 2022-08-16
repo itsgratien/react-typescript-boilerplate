@@ -19,9 +19,12 @@ const Landing = () => {
         onError: () => {
           setLoading(false);
         },
-        onSuccess: (res: any) => {
-          setUsers(res.data);
+        onSuccess: (res) => {
+          setUsers(res.data.data);
           setLoading(false);
+        },
+        onUploadProgress: (value) => {
+          console.log('pro:',value);
         },
       });
     };

@@ -33,9 +33,9 @@ const axiosService = async <Data>({
         }
       },
     });
-    return onSuccess(res.data);
-  } catch (error) {
-    return onError(error);
+    return onSuccess(res);
+  } catch (error: any) {
+    return onError(error.data);
   }
 };
 

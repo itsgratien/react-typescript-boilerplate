@@ -9,19 +9,19 @@ export const getUsers = (
   const users = [
     {
       username: faker.name.fullName(),
-      id: Math.random,
+      id: Math.random(),
     },
     {
       username: faker.name.fullName(),
-      id: Math.random,
+      id: Math.random(),
     },
     {
       username: faker.name.fullName(),
-      id: Math.random,
+      id: Math.random(),
     },
     {
       username: faker.name.fullName(),
-      id: Math.random,
+      id: Math.random(),
     },
   ];
 
