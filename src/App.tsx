@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import AppRoutes from 'src/components/Routes/Main';
+import AppRoutes from './components/Routes/Main';
 
 const App = () => {
   return (

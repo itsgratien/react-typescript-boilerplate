@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRoutes } from 'react-router-dom';
-import Landing from 'src/components/Pages/Landing/Landing';
+import Landing from '../Pages/Landing/Landing';
 import NotFound from '../Pages/NotFound/NotFound';
 
 const Main = () => {

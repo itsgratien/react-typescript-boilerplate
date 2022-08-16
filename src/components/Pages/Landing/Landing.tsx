@@ -18,7 +18,7 @@ const Landing = () => {
   React.useEffect(() => {
     dispatch(getUsersAction());
   }, []);
-  
+
   return (
     <div
       className={classname(

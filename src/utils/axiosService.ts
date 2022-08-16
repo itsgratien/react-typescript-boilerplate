@@ -1,4 +1,4 @@
-import axiosInstance from './AxiosSetup';
+import axiosInstance from './axiosSetup';
 import { AxiosService } from 'src/types/Axios';
 
 const axiosService = async <Data>({
@@ -35,7 +35,7 @@ const axiosService = async <Data>({
     });
     return onSuccess(res);
   } catch (error: any) {
-    return onError(error.data);
+    return onError(error);
   }
 };
 

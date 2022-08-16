@@ -1,4 +1,5 @@
 import { Method, AxiosResponse } from 'axios';
+import { Dispatch } from '@reduxjs/toolkit';
 
 export interface AxiosService<Data> {
   method: Method;
@@ -9,4 +10,5 @@ export interface AxiosService<Data> {
   onUploadProgress?: (value: number) => void;
   onDownloadProgress?: (value: number) => void;
   contentType?: 'application/json' | 'multipart/form-data';
+  dispatch?: Dispatch;
 }
