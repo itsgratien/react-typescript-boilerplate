@@ -4,8 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
-import { worker } from 'src/mocks/setup';
-import store from 'src/redux/store';
+import { worker } from 'src/mocks/Setup';
+import store from 'src/redux/Store';
 import { Provider } from 'react-redux';
 
 // start mock service worker

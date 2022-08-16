@@ -1,4 +1,4 @@
-import axiosInstance from './axiosSetup';
+import axiosInstance from './AxiosSetup';
 import { AxiosService } from 'src/types/Axios';
 
 const axiosService = async <Data>({

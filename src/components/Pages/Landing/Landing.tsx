@@ -3,7 +3,7 @@ import style from './Landing.module.scss';
 import classname from 'classnames';
 import { handIcon } from 'src/assets/images';
 import { useAppDispatch, useAppSelector } from 'src/hooks/useRedux';
-import { getUsersAction } from 'src/redux/actions/userAction';
+import { getUsersAction } from 'src/redux/Actions/UserAction';
 
 const Landing = () => {
   const dispatch = useAppDispatch();
